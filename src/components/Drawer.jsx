@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "./Nav";
-import Logo from "../images/logo.png"; // Import your logo image file
+
+const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort.png"
 
 export default function Drawer() {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -11,12 +12,11 @@ export default function Drawer() {
 
   return (
     <>
-      <div className="fixed top-6 right-10 z-30">
+      <div className="fixed top-6 left-10 z-40">
         <img
           src={Logo}
           alt="Logo"
-          className="w-14 h-14 cursor-pointer hover:drop-shadow-2xl"
-          onClick={() => setShowDrawer(!showDrawer)}
+          className="w-28 h-28 cursor-pointer hover:drop-shadow-2xl"
         />
       </div>
 

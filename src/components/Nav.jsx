@@ -2,12 +2,21 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { NavLink, useNavigate } from "react-router-dom";
 
+const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort.png";
+
 export default function Nav({ handleHideDrawer }) {
   return (
     <nav className="min-h-screen w-screen overscroll-none overflow-hidden flex items-center z-30 font-vollkorn font-black">
       <p className="absolute -z-10 text-[130px] leading-[200px] md:text-[400px] md:leading-[400px] opacity-5 text-gray-200 font-extrabold">
         menu
       </p>
+      <div className="fixed top-6 left-10 z-40">
+        <img
+          src={Logo}
+          alt="Logo"
+          className="h-28 cursor-pointer"
+        />
+      </div>
       <div>
         <motion.div>
           <ul className="mt-10 md:ml-16">

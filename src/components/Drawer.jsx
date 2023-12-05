@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Nav from "./Nav";
 
-const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort.png"
+const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort-blk.png";
 
 export default function Drawer() {
   const [showDrawer, setShowDrawer] = useState(false);

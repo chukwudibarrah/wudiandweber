@@ -76,14 +76,14 @@ export default function Home() {
       color: "crayola",
       title: "Branding",
       zIndex: 20,
-      textColor: "cosmiclatte",
+      textColor: "gunmetal",
       url: "/branding"
     },
     {
-      color: "engviolet",
+      color: "gunmetal",
       title: "Editing & Copywriting",
       zIndex: 10,
-      textColor: "gunmetal",
+      textColor: "cosmiclatte",
       url: "/copywriting"
     }
   ];

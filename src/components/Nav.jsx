@@ -11,11 +11,13 @@ export default function Nav({ handleHideDrawer }) {
         menu
       </p>
       <div className="fixed top-6 left-10 z-40">
+      <NavLink to="/">
         <img
           src={Logo}
           alt="Logo"
-          className="h-28 cursor-pointer"
+          className="w-20 md:w-28 cursor-pointer hover:drop-shadow-2xl"
         />
+        </NavLink>
       </div>
       <div>
         <motion.div>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Nav from "./Nav";
+import { NavLink } from "react-router-dom";
 
-const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort-blk.png";
+const Logo = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort.png";
 
 export default function Drawer() {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -13,11 +14,13 @@ export default function Drawer() {
   return (
     <>
       <div className="fixed top-6 left-10 z-40">
+        <NavLink to="/">
         <img
           src={Logo}
           alt="Logo"
-          className="w-28 h-28 cursor-pointer hover:drop-shadow-2xl"
+          className="w-20 md:w-28 cursor-pointer hover:drop-shadow-2xl"
         />
+        </NavLink>
       </div>
 
       {showDrawer ? (
@@ -26,7 +29,7 @@ export default function Drawer() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-14 h-14 flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 stroke-2 stroke-crayola hover:drop-shadow-2xl"
+          className="w-14 h-14 flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 stroke-2 stroke-engviolet hover:drop-shadow-2xl border-[1px] border-engviolet px-3"
           onClick={() => setShowDrawer(!showDrawer)}
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -38,7 +41,7 @@ export default function Drawer() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-14 h-14 fixed z-50 flex items-center cursor-pointer right-10 top-6 stroke-2 stroke-crayola hover:drop-shadow-2xl"
+          className="w-14 h-14 fixed z-50 flex items-center cursor-pointer right-10 top-6 stroke-2 stroke-engviolet hover:drop-shadow-2xl border-[1px] border-engviolet px-3"
           onClick={() => setShowDrawer(!showDrawer)}
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />

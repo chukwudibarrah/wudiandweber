@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/',
+        path: '/wudiandweber/',
         element: <Home />,
       },
       {
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-], { basename: import.meta.env.DEV ? '/' : '/wudiandweber/' });
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>

@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/wudiandweber/',
+        path: '/',
         element: <Home />,
       },
       {

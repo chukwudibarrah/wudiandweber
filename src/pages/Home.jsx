@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import Form from "../components/Form";
 import { NavLink } from "react-router-dom";
 
+const webdev =
+  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-web-development.png";
+const branding =
+  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-branding.png";
+const editing =
+  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-editing-copywriting.png";
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
 
@@ -70,22 +77,25 @@ export default function Home() {
       textContent:
         "We're an award-winning digital agency with more than a decade of experience",
       arrow: arrow,
-      url: "/webdevelopment"
+      url: "/webdevelopment",
+      image: webdev,
     },
     {
       color: "crayola",
       title: "Branding",
       zIndex: 20,
       textColor: "gunmetal",
-      url: "/branding"
+      url: "/branding",
+      image: branding,
     },
     {
       color: "gunmetal",
       title: "Editing & Copywriting",
       zIndex: 10,
       textColor: "cosmiclatte",
-      url: "/copywriting"
-    }
+      url: "/copywriting",
+      image: editing,
+    },
   ];
 
   return (
@@ -109,11 +119,19 @@ export default function Home() {
               <h2
                 className={`text-5xl mb-11 md:text-8xl font-vollkorn font-extrabold fixed top-1/2 transform -translate-y-1/2 text-${section.textColor}`}
               >
-                <span><NavLink to={section.url} className="">
-                {section.title}
-                </NavLink>
+                <span>
+                  <NavLink to={section.url} className="">
+                    {section.title}
+                  </NavLink>
                 </span>
               </h2>
+              <div style={{ position: "relative" }}>
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="w-60 fixed bottom-0 left-1/2 transform -translate-x-1/2"
+                />
+              </div>
             </div>
           )}
         </section>
@@ -124,7 +142,7 @@ export default function Home() {
             Send Us a Message
           </h2>
           <div className="flex justify-center my-16">
-          <Form />
+            <Form />
           </div>
         </div>
       </div>

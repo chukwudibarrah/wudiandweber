@@ -1,7 +1,7 @@
 export default function Form() {
   return (
     <div>
-      <form action="" className="font-sourcecode text-lg leading-relaxed text-engviolet">
+      <form action="" className="font-sourcecode text-lg text-engviolet">
         <p>
           Hello! My name is{" "}
           <span className="appearance-none">

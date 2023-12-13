@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import Form from "../components/Form";
 import { NavLink } from "react-router-dom";
 
-const webdev =
-  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-web-development.png";
-const branding =
-  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-branding.png";
-const editing =
-  "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-editing-copywriting.png";
+const webdev = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-web-development.png";
+const branding = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-branding.png";
+const editing = "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wudi-weber-editing-copywriting.png";
+
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
@@ -78,24 +76,24 @@ export default function Home() {
         "We're an award-winning digital agency with more than a decade of experience",
       arrow: arrow,
       url: "/webdevelopment",
-      image: webdev,
+      image: webdev
     },
     {
       color: "crayola",
       title: "Branding",
-      zIndex: 20,
+      zIndex: 10,
       textColor: "gunmetal",
       url: "/branding",
-      image: branding,
+      image: branding
     },
     {
       color: "gunmetal",
       title: "Editing & Copywriting",
-      zIndex: 10,
+      zIndex: 20,
       textColor: "cosmiclatte",
       url: "/copywriting",
-      image: editing,
-    },
+      image: editing
+    }
   ];
 
   return (
@@ -108,7 +106,9 @@ export default function Home() {
           }`}
           style={{ zIndex: section.zIndex }}
         >
-          <div className="grid justify-items-center text-center mt-28 md:mt-32">
+          <div
+            className={`grid justify-items-center text-center mt-28 md:mt-32 mb-${index === sections.length - 1 ? "60" : "0"} md:mb-0`}
+          >
             <p className="w-9/12 lg:w-4/12 mb-3 font-sourcecode md:text-2xl text-engviolet">
               {section.textContent}
             </p>
@@ -117,7 +117,7 @@ export default function Home() {
           {index === activeSection && (
             <div className="h-full flex justify-center items-center text-center">
               <h2
-                className={`text-5xl mb-11 md:text-8xl font-vollkorn font-extrabold fixed top-1/2 transform -translate-y-1/2 text-${section.textColor}`}
+              className={`text-5xl mb-11 md:text-8xl font-vollkorn font-extrabold fixed top-1/2 transform -translate-y-1/2 text-${section.textColor}`}
               >
                 <span>
                   <NavLink to={section.url} className="">
@@ -125,11 +125,11 @@ export default function Home() {
                   </NavLink>
                 </span>
               </h2>
-              <div style={{ position: "relative" }}>
+              <div className="">
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-60 fixed bottom-0 left-1/2 transform -translate-x-1/2"
+                  className="w-36 md:w-56 z-0 fixed bottom-0 left-1/2 transform -translate-x-1/2"
                 />
               </div>
             </div>
@@ -137,11 +137,11 @@ export default function Home() {
         </section>
       ))}
       <div className="h-screen w-screen bg-cosmiclatte z-20 flex justify-center">
-        <div className="md:w-5/12 w-10/12">
-          <h2 className="text-center text-engviolet font-vollkorn text-3xl md:text-5xl font-extrabold mt-32">
+        <div className="md:w-5/12 w-10/12 grid content-center">
+          <h2 className="text-center text-engviolet font-vollkorn text-3xl md:text-5xl font-extrabold md:mt-0 mt-32">
             Send Us a Message
           </h2>
-          <div className="flex justify-center my-16">
+          <div className="flex justify-center my-10">
             <Form />
           </div>
         </div>

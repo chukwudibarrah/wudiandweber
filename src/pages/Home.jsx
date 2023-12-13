@@ -129,7 +129,7 @@ export default function Home() {
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-36 md:w-56 z-0 fixed bottom-0 left-1/2 transform -translate-x-1/2"
+                  className="w-36 md:w-60 z-0 fixed bottom-0 left-1/2 transform -translate-x-1/2"
                 />
               </div>
             </div>

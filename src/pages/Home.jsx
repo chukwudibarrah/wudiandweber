@@ -90,7 +90,7 @@ export default function Home() {
       color: "gunmetal",
       title: "Editing & Copywriting",
       zIndex: 20,
-      textColor: "cosmiclatte",
+      textColor: "#F7F3E3",
       url: "/copywriting",
       image: editing
     }

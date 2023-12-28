@@ -11,6 +11,7 @@ import Contact from './pages/Contact.jsx';
 import WebDev from './pages/WebDev.jsx';
 import Branding from './pages/Branding.jsx';
 import Copywriting from './pages/Copywriting.jsx';
+import Project from './components/Project.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
+      },
+      {
+        path: "/projects/:slug",
+        element: <Project />,
       },
       {
         path: '/contact',

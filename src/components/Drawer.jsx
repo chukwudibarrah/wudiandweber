@@ -1,12 +1,25 @@
-import { useState } from "react";
-import Nav from "./Nav";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Nav from "./Nav";
 
 const Logo =
   "https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/wshort.png";
 
 export default function Drawer() {
   const [showDrawer, setShowDrawer] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function handleHideDrawer() {
     setShowDrawer(!showDrawer);
@@ -14,7 +27,11 @@ export default function Drawer() {
 
   return (
     <>
-      <div className="fixed top-6 left-10 z-40">
+      <div
+        className={`fixed top-6 left-10 z-40 transition-all duration-1000 ${
+          scrollY > 30 ? "hidden" : ""
+        }`}
+      >
         <NavLink to="/">
           <img
             src={Logo}
@@ -30,7 +47,9 @@ export default function Drawer() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-14 h-14 flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 stroke-2 stroke-engviolet hover:drop-shadow-2xl border-[1px] border-engviolet px-3"
+          className={`w-14 h-14 flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 stroke-2 stroke-engviolet ${
+            scrollY > 30 ? "bg-engviolet stroke-white" : "" 
+          } px-3 hover:drop-shadow-2xl border-[1px] border-engviolet hover:bg-engviolet hover:stroke-white transition-colors duration-1000`}
           onClick={() => setShowDrawer(!showDrawer)}
         >
           <path
@@ -46,7 +65,9 @@ export default function Drawer() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-14 h-14 fixed z-50 flex items-center cursor-pointer right-10 top-6 stroke-2 stroke-engviolet hover:drop-shadow-2xl border-[1px] border-engviolet px-3"
+          className={`w-14 h-14 flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 stroke-2 stroke-engviolet ${
+            scrollY > 30 ? "bg-engviolet stroke-white" : "" 
+          } px-3 hover:drop-shadow-2xl border-[1px] border-engviolet hover:bg-engviolet hover:stroke-white transition-colors duration-1000`}
           onClick={() => setShowDrawer(!showDrawer)}
         >
           <path

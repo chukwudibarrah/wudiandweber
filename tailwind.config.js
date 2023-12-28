@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        feldgrau: "#395B50",
+        feldgrau: '#395B50',
         crayola: "#EF7B45",
         gunmetal: "#183642",
         cosmiclatte: "#F7F3E3",

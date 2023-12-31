@@ -11,6 +11,9 @@ export default {
         cosmiclatte: "#F7F3E3",
         engviolet: "#9D69A3",
       },
+      backgroundImage: {
+        'aboutImage': "url('https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/about-wudiandweber.webp')"
+      },
     },
     fontFamily: {
       vollkorn: ["Vollkorn", "serif"],

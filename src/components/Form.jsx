@@ -22,7 +22,7 @@ export default function Form() {
           . Looking forward to hearing from you!
         </p>
         <div className="my-7">
-          <button className="bg-cosmiclatte border-2 border-engviolet rounded-2xl px-3 hover:bg-engviolet hover:text-cosmiclatte">Send message</button>
+          <button className="bg-cosmiclatte border-2 border-engviolet rounded-2xl px-3 hover:bg-engviolet hover:text-cosmiclatte transition-all duration-1000">Send message</button>
         </div>
       </form>
     </div>

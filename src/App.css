@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Vollkorn:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Vollkorn:wght@400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,24 +16,35 @@
 #animate {
   text-underline-offset: var(--offset, 0.2em);
   text-decoration: underline 0.15em;
-  text-decoration-thickness: 5px;
-  text-decoration-color: #e76f51;
-  transition: --offset 400ms, text-decoration-color 400ms;
+  text-decoration-thickness: 8px;
+  text-decoration-color: #9d69a3;
+  transition: --offset 0.75s, ease-out text-decoration-color 0.75s;
 }
 
 #animate:hover,
 #animate:focus {
   --offset: 0.4em;
-  text-decoration-color: #e76f51;
+  text-decoration-color: #9d69a3;
 }
 
 @supports not (background: paint(something)) {
   #animate {
-    transition: text-underline-offset 400ms, text-decoration-color 400ms;
+    transition: text-underline-offset ease-out 0.75s,
+      text-decoration-color 0.75s;
   }
 
   #animate:hover,
   #animate:focus {
     text-underline-offset: 0.4em;
+  }
+}
+
+@layer components {
+  .main-decor {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .animate-decor {
+    @apply bg-left-bottom bg-gradient-to-r from-engviolet to-engviolet bg-[length:100%_5px] bg-no-repeat group-hover:bg-[length:0%_5px] transition-all duration-700 ease-out;
   }
 }

@@ -13,6 +13,11 @@ import Branding from './pages/Branding.jsx';
 import Copywriting from './pages/Copywriting.jsx';
 import Project from './components/Project.jsx';
 
+// Global unhandledrejection event listener
+window.addEventListener('unhandledrejection', function (event) {
+  console.error('Unhandled Promise Rejection:', event.reason);
+});
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -33,10 +38,6 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/projects/:slug",
-        element: <Project />,
-      },
-      {
         path: '/contact',
         element: <Contact />,
       },
@@ -45,12 +46,24 @@ const router = createBrowserRouter([
         element: <WebDev />,
       },
       {
+        path: "/webdevelopment/:slug",
+        element: <Project contentType="webDevelopment" />,
+      },
+      {
         path: '/branding',
         element: <Branding />,
       },
       {
+        path: "/branding/:slug",
+        element: <Project contentType="branding" />,
+      },
+      {
         path: '/copywriting',
         element: <Copywriting />,
+      },
+      {
+        path: "/copywriting/:slug",
+        element: <Project contentType="editing" />,
       },
     ],
   },

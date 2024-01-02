@@ -7,6 +7,7 @@ import './index.css';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
+import Services from './pages/Services.jsx';
 import Contact from './pages/Contact.jsx';
 import WebDev from './pages/WebDev.jsx';
 import Branding from './pages/Branding.jsx';
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/copywriting/:slug",
         element: <Project contentType="editing" />,
+      },
+      {
+        path: '/services',
+        element: <Services />,
       },
     ],
   },

@@ -60,6 +60,20 @@ export default function Nav({ handleHideDrawer }) {
               className="nav-item mb-10 hover:drop-shadow-2xl group text-charcoal transition-all duration-300 ease-in-out"
             >
               <NavLink
+                to="/services"
+                className="text-5xl md:text-8xl font-black bg-left-bottom bg-gradient-to-r from-charcoal to-charcoal bg-[length:100%_8px] bg-no-repeat group-hover:bg-[length:0%_8px] transition-all duration-700 ease-out"
+                onClick={() => handleHideDrawer()}
+              >
+                Services
+              </NavLink>
+            </motion.li>
+            <motion.li
+              animate={{ x: 0 }}
+              initial={{ x: "100%" }}
+              transition={{ delay: 0.5, duration: 1.15 }}
+              className="nav-item mb-10 hover:drop-shadow-2xl group text-charcoal transition-all duration-300 ease-in-out"
+            >
+              <NavLink
                 to="/projects"
                 className="text-5xl md:text-8xl font-black bg-left-bottom bg-gradient-to-r from-charcoal to-charcoal bg-[length:100%_8px] bg-no-repeat group-hover:bg-[length:0%_8px] transition-all duration-700 ease-out"
                 onClick={() => handleHideDrawer()}

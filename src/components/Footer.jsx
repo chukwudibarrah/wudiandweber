@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="font-montserrat md:text-2xl">
+    <footer className="font-montserrat md:text-2xl bg-cosmiclatte">
       <div className=" px-4 md:px-8 md:py-10">
         <hr className="border-2 border-crayola" />
       </div>

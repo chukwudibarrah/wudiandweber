@@ -12,8 +12,9 @@ export default {
         engviolet: "#9D69A3",
       },
       backgroundImage: {
-        'aboutImage': "url('https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/about-wudiandweber.webp')",
-        'aboutMobile': "url('https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/aboutMobile.webp')",
+        'aboutImage': "url('/web.webp')",
+        'aboutMobile': "url('/mobile.webp')",
+        'team-image': "url('/about-wudiweber-team.webp')",
       },
     },
     fontFamily: {

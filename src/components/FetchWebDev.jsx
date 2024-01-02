@@ -43,13 +43,7 @@ export default function FetchWebDev() {
 
   return (
     <div
-      className="size-full mx-4 md:px-8"
-      style={{
-        backgroundImage: hoveredImageUrl ? `url(${hoveredImageUrl})` : "none",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        transition: "background-image 0.3s ease-in-out",
-      }}
+      className="grid xl:grid-cols-2 mx-4 md:px-8"
     >
       <div>
         {projects.map((project) => (
@@ -62,12 +56,21 @@ export default function FetchWebDev() {
             onMouseLeave={handleMouseLeave}
           >
             <div>
-            <h2 className="text-3xl md:text-5xl font-sourcecode font-bold py-8 md:py-12 group text-charcoal">
+            <h2 className="text-3xl md:text-5xl font-sourcecode font-bold py-8 md:py-12 group text-gunmetal">
                 {project.fields.projectName}
               </h2>
             </div>
           </NavLink>
         ))}
+      </div>
+      <div
+      style={{
+        backgroundImage: hoveredImageUrl ? `url(${hoveredImageUrl})` : "none",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        transition: "background-image 0.3s ease-in-out",
+      }}
+      >
       </div>
     </div>
   );

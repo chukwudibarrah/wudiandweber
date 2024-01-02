@@ -3,9 +3,9 @@ import FetchCopywriting from "../components/FetchCopywriting";
 
 export default function Projects() {
   return (
-    <div>
-      <div className="pt-28 md:pt-52 px-4 md:px-8">
-        <h1 className="text-5xl md:text-8xl font-vollkorn font-black">
+    <div className="bg-cosmiclatte py-40 md:pt-80">
+      <div className="">
+        <h1 className="text-5xl md:text-8xl font-vollkorn font-black px-4 md:px-8">
           Selected projects
         </h1>
       </div>

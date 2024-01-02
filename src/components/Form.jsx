@@ -1,7 +1,7 @@
 export default function Form() {
   return (
     <div>
-      <form action="" className="font-sourcecode text-lg text-engviolet">
+      <form action="" className="font-sourcecode lg:text-xl text-lg text-engviolet">
         <p>
           Hello! My name is{" "}
           <span className="appearance-none">
@@ -22,7 +22,7 @@ export default function Form() {
           . Looking forward to hearing from you!
         </p>
         <div className="my-7">
-          <button className="bg-cosmiclatte border-2 border-engviolet rounded-2xl px-3 hover:bg-engviolet hover:text-cosmiclatte transition-all duration-1000">Send message</button>
+          <button className="border-2 border-engviolet rounded-2xl px-3 hover:bg-engviolet hover:text-cosmiclatte transition-all duration-1000">Send message</button>
         </div>
       </form>
     </div>

@@ -12,12 +12,12 @@ export default function Nav({ handleHideDrawer }) {
         <NavLink 
         to="/" 
         onClick={() => handleHideDrawer()}>
-          <h3 className="font-vollkorn text-xl md:text-5xl font-black leading-5 text-engviolet">
+          <h3 className="font-vollkorn text-xl md:text-5xl font-black leading-5 text-crayola">
             Wudi&
             <br />
             Weber
           </h3>
-          <p className="hidden md:block uppercase font-sourcecode text-xs md:text-sm text-engviolet">
+          <p className="hidden md:block uppercase font-sourcecode text-xs md:text-sm text-crayola">
             creative collective
           </p>
         </NavLink>

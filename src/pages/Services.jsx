@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
@@ -89,7 +90,14 @@ export default function Services() {
       {/* New section starts */}
       <section className="py-40">
         <div className="grid xl:grid-cols-2 gap-20">
-          <img src="/wudiweber-services.webp" alt="wudi & weber office" />
+        <motion.img
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              src="wudiweber-services.webp"
+              alt="team image"
+              className="shadow-xl hover:shadow-2xl"
+            />
           <div className="grid content-between">
             <h2 className="text-gunmetal font-sourcecode font-light text-xl md:text-4xl py-32 xl:py-0">
               Creativity is what keeps Wudi & Weber going. We love pushing
@@ -156,7 +164,7 @@ export default function Services() {
             </h2>
             <NavLink
               to="/contact"
-              className="p-2 hover:bg-engviolet text-engviolet rounded-full hover:border-engviolet hover:border-2 border-2 border-engviolet hover:text-cosmiclatte transition-all duration-1000 font-sourcecode text-xl w-[9rem]"
+              className="p-2 font-sourcecode text-xl w-[9rem] text-engviolet rounded-full hover:border-engviolet hover:border-2 border-2 border-engviolet hover:text-cosmiclatte hover:bg-engviolet transition-all duration-1000"
             >
               <span className="">Contact us</span>
             </NavLink>

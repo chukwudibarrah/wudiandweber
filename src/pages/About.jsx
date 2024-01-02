@@ -7,7 +7,7 @@ const link = (
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={1}
-    stroke="#183642"
+    stroke="#F7F3E3"
     className="w-6 h-6 lg:w-14 lg:h-14 z-30"
   >
     <path
@@ -59,11 +59,11 @@ export default function About() {
           <div className="flex justify-end">
             <motion.img
               whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 50, damping: 40 }}
-              src="/wudiweber-hands.webp"
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              src="wudiweber-hands.webp"
               alt="team image"
-              className="xl:pl-10 xl:w-[70%]"
+              className="shadow-xl hover:shadow-2xl"
             />
           </div>
         </div>
@@ -92,24 +92,19 @@ export default function About() {
           <div className="">
             <motion.img
               whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 50, damping: 40 }}
-              src="/about-wudiweber-team.webp"
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 40 }}
+              src="https://raw.githubusercontent.com/chukwudibarrah/wudiandweber/main/public/about-wudiweber-team.webp"
               alt=""
-              className=""
+              className="shadow-xl hover:shadow-2xl"
             />
           </div>
           <div className="flex flex-col justify-between">
             <p className="font-sourcecode font-light text-xl text-gunmetal md:text-4xl xl:pr-32 xl:py-0 py-10">
-              Whether it&apos;s crafting a visually stunning brand identity,
-              designing immersive digital experiences, or developing strategic
-              marketing campaigns, we approach each project with meticulous
-              attention to detail and an unwavering dedication to quality.
+            Whether we&apos;re creating a standout brand look, building engaging online experiences or planning effective marketing efforts, we tackle each project with careful attention to detail and a strong commitment to quality.
             </p>
             <p className="text-gunmetal font-sourcecode font-light text-sm md:text-xl uppercase xl:pr-32 xl:py-0 py-10">
-              With a steadfast commitment to delivering exceptional solutions,
-              we strive to exceed your expectations and help you achieve your
-              goals.
+            We&apos;re dedicated to giving you outstanding solutions, going above and beyond to surpass your expectations and support you in reaching your goals.
             </p>
           </div>
         </div>
@@ -120,7 +115,7 @@ export default function About() {
         <div className="grid xl:grid-cols-2 gap-5 md:px-8 px-4 h-96">
           <NavLink
             to="/services"
-            className="bg-cosmiclatte flex xl:flex-col justify-center items-center pump-feldgrau transition-all duration-1000"
+            className="bg-gunmetal flex xl:flex-col justify-center items-center pump-feldgrau transition-all duration-1000"
           >
             <span className="px-8 font-vollkorn font-black text-engviolet text-4xl lg:text-7xl z-20">
               Services

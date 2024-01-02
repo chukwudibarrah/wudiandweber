@@ -12,9 +12,9 @@ export default {
         engviolet: "#9D69A3",
       },
       backgroundImage: {
-        'aboutImage': "url('/web.webp')",
-        'aboutMobile': "url('/mobile.webp')",
-        'team-image': "url('/about-wudiweber-team.webp')",
+        'aboutImage': "url('/wudiweber.webp')",
+        'aboutMobile': "url('/wudiwebermobile.webp')",
+        'aboutTab': "url('/wudiwebertab.webp')",
       },
     },
     fontFamily: {

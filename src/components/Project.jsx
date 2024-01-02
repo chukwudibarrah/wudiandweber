@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import * as contentful from "contentful";
 import PropTypes from "prop-types";
 
@@ -51,11 +51,14 @@ export default function Project({ contentType }) {
   }, [project]);
 
   if (isFetching) {
-    return <div className="h-screen flex justify-center items-center">
-      <h1 className="text-4xl font-vollkorn font-black">
-        Wudi &<br />Weber
-      </h1>
-    </div>;
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <h1 className="text-4xl font-vollkorn font-black">
+          Wudi &<br />
+          Weber
+        </h1>
+      </div>
+    );
   }
 
   if (error) {
@@ -67,40 +70,42 @@ export default function Project({ contentType }) {
   }
 
   return (
-    <div className="min-h-screen w-screen">
-      <div className="py-28 md:py-36 px-4 md:px-8">
+    <div className="min-h-screen w-screen bg-cosmiclatte">
+      <div className="py-40 md:pt-80 px-4 md:px-8">
         <div className="grid grid-cols-1 xl:grid-cols-2">
           <img
             src={project.fields.featuredImage.fields.file.url}
             alt={project.fields.projectName}
           />
           <div className="flex items-center">
-            <h1 className="text-4xl md:text-8xl font-vollkorn font-black py-10 xl:py-0 xl:px-14">
+            <h1 className="text-4xl md:text-8xl font-vollkorn font-black py-10 xl:py-0 xl:px-14 text-gunmetal">
               {project.fields.projectName}
             </h1>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row font-sourcecode md:text-2xl md:leading-loose">
-          <div className="lg:w-4/6 xl:pt-16">
+          <div className="lg:w-4/6 xl:pt-16 text-gunmetal">
             <p>{project.fields.description}</p>
           </div>
-          <div className="lg:w-2/6 lg:pl-20 uppercase xl:pt-16 py-12 lg:pt-0">
+          <div className="lg:w-2/6 lg:pl-20 uppercase xl:pt-16 py-12 lg:pt-0 text-gunmetal group transition-all duration-300 ease-in-out">
             <p>Client: {project.fields.client}</p>
             <p>Date: {project.fields.date}</p>
-            <a
+            <NavLink
+              className="main-decor"
               href={project.fields.url}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <span className="border-b-2 bg-left-bottom bg-gradient-to-r from-engviolet to-engviolet bg-[length:100%_6px] bg-no-repeat group-hover:bg-[length:0%_6px] transition-all duration-700 ease-out outline-none bg-inherit">
               See project
-            </a>
+              </span>
+            </NavLink>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 
 Project.propTypes = {
   contentType: PropTypes.string.isRequired,
